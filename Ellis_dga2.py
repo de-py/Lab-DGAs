@@ -35,7 +35,7 @@ def simple_http(domain) -> str:
     requests.get("http://%s/index.html" % domain)
 
 
-# Pulls the seed from an http request. (Twitter api requires approval first. Simulating any api...)
+# Pulls the seed from an http request. (Simulating any api...such as twitter trending hashtags.. where you can't predict the next one )
 def get_seed() -> str:
     response = requests.get("http://192.168.182.135/seed.txt")
     # print(response.text.rstrip())
