@@ -59,7 +59,7 @@ def dns_query(domain:str) -> str:
     
 
 
-# This function tries to update the zone files autoamtically to include new A records. 
+# This function tries to update the zone files automatically to include new A records. 
 def add_to_dns(val:str) -> None:
     if ".com" in val:
         os.system('echo "%s.    IN      A       192.168.182.135" >> /etc/bind/zones/db.com' % val)
